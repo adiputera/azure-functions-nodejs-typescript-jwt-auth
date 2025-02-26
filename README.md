@@ -1,5 +1,5 @@
-# Azure Functions Node.js JWT Auth
-This project is an Azure Functions application that implements JWT (JSON Web Token) authentication, built with Node.js.
+# Azure Functions Node.js TypeScript JWT Auth
+This project is an Azure Functions application that implements JWT (JSON Web Token) authentication, built with Node.js TypeScript.
 
 ## Dependencies
 - [azure-functions-nodejs-library](https://github.com/Azure/azure-functions-nodejs-library)
@@ -38,7 +38,7 @@ To start the application, execute:
     the response for correct client ID and client secret:
     ```json
     {
-        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ0ZXN0X2NsaWVudCIsInRva2VuX3R5cGUiOiJCZWFyZXIiLCJpYXQiOjE3Mzk5Mzk5MDQsImV4cCI6MTczOTk0MDgwNH0.37EK6stj6B4CZvmCd1gxpiN4g5JPTYVyJKKuQBSju8Y",
+        "access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGlwdXRlcmEiLCJzdWIiOiJ0ZXN0X2NsaWVudCIsImlhdCI6MTc0MDU1NjMyOCwiZXhwIjoxNzQwNTU3MjI4fQ.d8HcWvSL9yV38rNTFbREmnQDn9phY-jwhrbN-3yQavg",
         "token_type": "Bearer",
         "expiresIn": 890
     }
@@ -52,7 +52,7 @@ To start the application, execute:
 - **Protected Endpoint**: [POST] `/api/endpoint`
     ```bash
     curl --location --request POST 'http://localhost:7071/api/endpoint' \
-    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjbGllbnRfaWQiOiJ0ZXN0X2NsaWVudCIsInRva2VuX3R5cGUiOiJCZWFyZXIiLCJpYXQiOjE3Mzk5Mzk5MDQsImV4cCI6MTczOTk0MDgwNH0.37EK6stj6B4CZvmCd1gxpiN4g5JPTYVyJKKuQBSju8Y'
+    --header 'Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJhZGlwdXRlcmEiLCJzdWIiOiJ0ZXN0X2NsaWVudCIsImlhdCI6MTc0MDU1NjMyOCwiZXhwIjoxNzQwNTU3MjI4fQ.d8HcWvSL9yV38rNTFbREmnQDn9phY-jwhrbN-3yQavg'
     ```
     the response if authenticated successfully:
     ```json

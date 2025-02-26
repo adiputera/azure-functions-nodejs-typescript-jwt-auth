@@ -8,7 +8,7 @@ export async function endpoint(request: HttpRequest, context: InvocationContext)
             const token = bearerToken.split(' ')[1];
             if (token) {
                 const decoded = jwt.verify(token, `${process.env['jwt_secret_key']}`);
-                if (decoded.client_id && `${process.env[decoded.client_id]}`) {
+                if (decoded.sub && `${process.env[decoded.sub]}`) {
                     return {
                         status: 200,
                         headers: {

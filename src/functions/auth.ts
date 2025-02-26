@@ -15,8 +15,8 @@ export async function auth(request: HttpRequest, context: InvocationContext): Pr
                     && jwtSecretKey
                     && jwtExpiresIn) {
                 const token = jwt.sign({
-                    client_id: clientId,
-                    token_type: 'Bearer'
+                    iss: 'adiputera',
+                    sub: clientId
                 }, jwtSecretKey, {
                     expiresIn: jwtExpiresIn
                 });
